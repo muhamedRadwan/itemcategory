@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+<!-- Show Category -->
+{% block content %}
+{% include 'header.html' %}
+<div class="container background-white">
+    {% if category %}
+        <h2>{{ category.name }}</h2>
+        {% if items %}
+        {% for item in items %}
+          <p class="lead">
+              <a href="{{ url_for('view_item', category_id=category.id, item_id=item.id ) }}">{{ item.name }}</a>
+          </p>
+
+
+        {% endfor %}
+
+         {% else %}
+            <h2 class="alert-warning"> No Items For This Catalog</h2>
+            {% endif %}
+        <a href="{{ url_for('create_item',category_id=category.id )}}"><h3 class="text-grean">Add new Item !</h3></a>
+    {% else %}
+        {% include 'notFound.html' %}
+    {% endif %}
+</div>
+    {%  include 'footer.html' %}
+{% endblock %}

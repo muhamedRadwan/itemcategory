@@ -1,0 +1,128 @@
+{% from "_formhelpers.html" import render_field %}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!--LOAD PRE-REQUI SITES FOR GOOGLE SIGN IN -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+    </script>
+    <script src="//apis.google.com/js/platform.js?onload=start"></script>
+    <!-- END PRE-REQUISITES FOR GOOGLE SIGN IN -->
+
+
+</head>
+
+
+<body>
+<img class="imk" src="{{ url_for('static', filename='imgs/register.jpg') }}">
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9&appId=1941978119382429";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- GOOGLE PLUS SIGN IN BUTTON-->
+<div class="container">
+    <div class="row">
+        <!-- Flash section -->
+    <div class="container back-white marg">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p class="lead alert-warning text-danger">{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </div>
+            {% if not STATE %}
+                <form class="form-group lead"  method="post" action="{{ url_for('singup') }}" enctype=multipart/form-data>
+            {% else %}
+                <form class="form-group lead"  method="post" action="{{ url_for('login') }}" enctype=multipart/form-data>
+            {% endif %}
+
+                <fieldset >
+                    <legend class="text-center">{{ page_name }}</legend>
+                <dl>
+                    {{ form.hidden_tag() }}
+                    {% if not STATE %}
+                    <div class="form-group">
+                        {{ render_field(form.name) }}
+                    </div>
+                    {% endif %}
+                    <div class="form-group">
+                        {{ render_field(form.email) }}
+                    </div>
+                    <div class="form-group lead">
+                    {{ render_field(form.password) }}
+                    </div>
+                    {% if STATE %}
+                    <div class="lead">
+                    {{ render_field(form.remember) }}
+                    </div>
+                    {% endif %}
+                    {% if  not STATE %}
+                    <input type="file" value="Choice ypur Picture" name="file"><br>
+                    {% endif %}
+                    <input type="submit" value="Login" class="btn-primary btn">
+                </dl>
+                    <div style="width: 100%; height: 20px; border-bottom: 1px solid black; text-align: center">
+                      <span style="font-size: 40px; background-color: #F3F5F6; padding: 0 10px;">
+                        OR <!--Padding is optional-->
+                        </span>
+                     <div id="signInButton">
+                              <span class="g-signin"
+                                    data-scope="openid email"
+                                    data-clientid="691705250436-afqkg7ef0p64qum0ic6rjqtab5n62r2q.apps.googleusercontent.com"
+                                    data-redirecturi="postmessage"
+                                    data-accesstype="offline"
+                                    data-cookiepolicy="single_host_origin"
+                                    data-callback="signInCallback"
+                                    data-approvalprompt="force">
+                              </span>
+                     </div>
+</div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+<div id="result"></div>
+
+
+<!--END GOOGLE PLUS SIGN IN BUTTON -->
+<script>
+    function signInCallback(authResult) {
+        if (authResult['code']) {
+            $('#signInButton').attr('style', 'display:none');
+            $.ajax({
+                type: 'post',
+                url: '/gconnect?state={{STATE}}',
+                processDate: false,
+                contentType: 'application/octet-stream; charset=utf-8',
+                data: authResult['code'],
+                success: function (result) {
+                    // Handle or verify the server response if necessary.
+                    if (result) {
+                        $('#result').html('Login Successful!</br>' + result + '</br>Redirecting...')
+                        setTimeout(function () {
+                            window.location.href = "/categories";
+                        }, 4000);
+
+                    } else if (authResult['error']) {
+                        console.log('There was an error: ' + authResult['error']);
+                    } else {
+                        $('#result').html('Failed to make a server-side call. Check your configuration and console.');
+                    }
+                }
+            });
+        }
+    }
+</script>
+</body>
+</html>

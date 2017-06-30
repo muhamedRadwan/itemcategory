@@ -1,0 +1,28 @@
+<header class="header" data-lead-id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-lg-10 col-lg-offset-1">
+                <div class="fill">
+                    <a data-lead-id="logo"><img class="logo" src="{{ url_for('static',filename='imgs/logo.png') }}" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="wrapper content" data-lead-id="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-lg-10 col-lg-offset-1 text-center">
+                <div class="fill-container">
+                    <div class="fill fill-content text-center" data-lead-id="content-fill">
+                        <img class="img-responsive img-inline" src="{{ url_for('static',filename='imgs/404.png')}}" alt="" data-lead-id="content-img">
+                        <h1 class="h2" data-lead-id="content-title">404 Not Found<br><br>WE'RE SORRY<br>THIS PAGE HAD A ROUGH LANDING</h1>
+                        <p data-lead-id="content-text">404 Error. It could be an outdated link or just a small technical glitch. Try the URL again, or find what you're looking for on our <a href="{{ url_for('view_categories') }}">Homepage</a>.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

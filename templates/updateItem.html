@@ -1,0 +1,25 @@
+{% extends 'main.html' %}
+{% block content %}
+    {% include 'header.html' %}
+    <div class="container background-white">
+         {%if item  and category_id%}
+        <h1>Update {{ item.name }} Item</h1>
+        <form method="post" action="{{ url_for('update_item',category_id=category_id,item_id=item.id)}}"class="center-block ">
+            <div class="form-group">
+                <label for="name" class="lead">Name:<input id="name" name="name" value="{{ item.name }}" type="text"></label>
+
+            </div>
+            <div class="form-group">
+                <label for="description" class="lead">Description:</label>
+                    <textarea id="description" placeholder="Write your description here" name="description"  maxlength="500"rows="3" cols="25" mac class="form-control text-area" > {{ item.description }}</textarea>
+
+            </div>
+        <input type="submit" value="Update!" class="btn btn-success">
+        <a href="{{ url_for('view_item',item_id=item.id,category_id=category_id) }}" class="btn btn-primary">Cancel ! </a>
+        </form>
+        {% else %}
+    {% include 'notFound.html' %}
+    {% endif %}
+    </div>
+    {%  include 'footer.html' %}
+{% endblock %}

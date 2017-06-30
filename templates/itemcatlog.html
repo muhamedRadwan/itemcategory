@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+<!-- Show Category -->
+{% block content %}
+{% include 'header.html' %}
+<div class="container background-white">
+    {% if item %}
+        <span class="h2">{{ item.name }}</span><span class="small">{{ item.category.name }}</span><br>
+         <span class="lead"><span class="h2">Description: </span>{{ item.description }}</span><br>
+        <span><span class="h2">Created in :</span> {{ item.created }}</span><br>
+          <p class="lead right">
+              <a class="hiberlink-inline   btn btn-danger" href="{{ url_for('delete_item',category_id=item.category.id,item_id=item.id) }}">Delete</a> |
+              <a class="hiberlink-inline btn btn-success" href="{{ url_for('update_item',category_id=item.category.id,item_id=item.id) }}">Update</a></p>
+    {% else %}
+        {% include 'notFound.html' %}
+    {% endif %}
+</div>
+    {%  include 'footer.html' %}
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+{% block content %}
+    {% include 'header.html' %}
+ <div class="container background-white">
+    {% if category %}
+        <h1>Add New Item To <a href="{{ url_for('view_category',category_id=category.id)}}">{{ category.name }}</a></h1>
+        <form method="post" action="{{ url_for('create_item',category_id=category.id) }}"class="center-block ">
+            <div class="form-group">
+                <label for="name" class="lead">Name:<input id="name" name="name" type="text"></label>
+
+            </div>
+            <div class="form-group">
+                <label for="description" class="lead">Description:</label>
+                    <textarea id="description" placeholder="Write your description here" name="description" maxlength="500"rows="3" cols="25" mac class="form-control text-area" ></textarea>
+
+            </div>
+        <input type="submit" value="Add!" class="btn btn-btn-success">
+            <a href="{{ url_for('view_category',category_id=category.id) }}" class="btn btn-primary">Cancel !</a>
+        </form>
+
+    {% else %}
+        {% include 'notFound.html' %}
+    {% endif %}
+    </div>
+    {%  include 'footer.html' %}
+{% endblock %}

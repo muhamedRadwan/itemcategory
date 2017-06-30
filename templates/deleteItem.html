@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+<!-- Show Category -->
+{% block content %}
+{% include 'header.html' %}
+<div class="container background-white">
+    {% if item %}
+        <span class="h2">{{ item.name }}</span><span class="small">{{ item.category.name }}</span><br>
+         <span class="lead"><span class="h2">Description: </span>{{ item.description }}</span><br>
+        <span><span class="h2">Created in :</span> {{ item.created }}</span><br>
+        <p class="lead text-danger"> Are You Sure you want to Delete ?</p>
+        <form method="post" action="{{url_for('delete_item', item_id=item.id,category_id=item.category.id )}}">
+            <input type="submit" value="Delete" class="btn btn-danger"> |
+            <a href="{{ url_for('view_item',item_id=item.id,category_id=item.category.id) }}" class="btn btn-primary">Cancel</a>
+        </form>
+    {% else %}
+        {% include 'notFound.html' %}
+    {% endif %}
+</div>
+    {%  include 'footer.html' %}
+{% endblock %}
