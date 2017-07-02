@@ -346,7 +346,7 @@ def gconnect():
     # check if user already stored in Database
     if tempuser is None:
         newuser = create_user(login_session)
-        login_session['id'] = newuser.id
+        login_session['id'] = newuser
     else:
         login_user(tempuser)
         login_session['id'] = tempuser.id
