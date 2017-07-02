@@ -11,6 +11,8 @@
     </script>
     <script src="//apis.google.com/js/platform.js?onload=start"></script>
     <!-- END PRE-REQUISITES FOR GOOGLE SIGN IN -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
 
 
 </head>
@@ -40,7 +42,7 @@
         {% endif %}
         {% endwith %}
     </div>
-            {% if not STATE %}
+            {% if not login %}
                 <form class="form-group lead"  method="post" action="{{ url_for('singup') }}" enctype=multipart/form-data>
             {% else %}
                 <form class="form-group lead"  method="post" action="{{ url_for('login') }}" enctype=multipart/form-data>
@@ -50,7 +52,7 @@
                     <legend class="text-center">{{ page_name }}</legend>
                 <dl>
                     {{ form.hidden_tag() }}
-                    {% if not STATE %}
+                    {% if not login %}
                     <div class="form-group">
                         {{ render_field(form.name) }}
                     </div>
@@ -61,12 +63,12 @@
                     <div class="form-group lead">
                     {{ render_field(form.password) }}
                     </div>
-                    {% if STATE %}
+                    {% if login %}
                     <div class="lead">
                     {{ render_field(form.remember) }}
                     </div>
                     {% endif %}
-                    {% if  not STATE %}
+                    {% if  not login %}
                     <input type="file" value="Choice ypur Picture" name="file"><br>
                     {% endif %}
                     <input type="submit" value="Login" class="btn-primary btn">
@@ -78,7 +80,7 @@
                      <div id="signInButton">
                               <span class="g-signin"
                                     data-scope="openid email"
-                                    data-clientid="691705250436-afqkg7ef0p64qum0ic6rjqtab5n62r2q.apps.googleusercontent.com"
+                                    data-clientid="787345124934-pfgifvncqd8nt78hfc37g5uu55sofeha.apps.googleusercontent.com"
                                     data-redirecturi="postmessage"
                                     data-accesstype="offline"
                                     data-cookiepolicy="single_host_origin"

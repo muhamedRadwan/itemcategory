@@ -9,16 +9,17 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Categories App</a>
+          <a class="navbar-brand" href="{{ url_for('view_categories') }}">Categories App user:{{ session['username'] }}</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-right" id="bs-collapse-1">
           <ul class="nav navbar-nav">
             <li class="active"><a href="{{ url_for('view_categories') }}">Home <span class="sr-only">(current)</span></a></li>
-           {% if session['user_id'] %}
+           {% if session['id'] %}
                <li><a href="{{ url_for('logout') }}">Logout</a></li>
            {% else %}
                <li><a href="{{ url_for('login') }}">Login</a></li>
+               <li><a href="{{ url_for('singup') }}">Register</a></li>
            {% endif %}
           </ul>
 

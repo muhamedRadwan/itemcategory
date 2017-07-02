@@ -1,7 +1,7 @@
 import random
 import string
 from flask_bootstrap import Bootstrap
-from uploder import save_file
+from uploader import save_file
 from forms import LoginForm, RegisterForm
 from flask_login import LoginManager, login_user, login_required, logout_user
 from flask import Flask,\
@@ -41,8 +41,8 @@ login_Manager.login_view = 'login'
 @app.route('/categories/')
 def view_categories():
         categories = session.query(Category).all()
-        recent_Items = session.query(ItemCategory).order_by(ItemCategory.created.desc())
-        return render_template('index.html', categories=categories,items=recent_Items)
+        recent_items = session.query(ItemCategory).order_by(ItemCategory.created.desc()).all()
+        return render_template('index.html', categories=categories, latest=recent_items)
 
 
 @app.route('/categories/new/', methods={"POST", "GET"})
@@ -201,28 +201,31 @@ def login():
                 flash('Error Unknown Username Or Password ')
                 return redirect(request.url)
             else:
-                login_session['user_id'] = user.id
+                login_session['id'] = user.id
                 login_session['username'] = user.name
+                login_session['email'] = user.email
+                login_session['provider'] = 'website'
                 login_user(user, remember=form.remember.data)
                 return redirect(url_for('view_categories'))
     state = ''.join(random.choice(string.uppercase + string.digits)for i in xrange(32))
     login_session['state'] = state
-    return render_template('login.html', STATE=state, form=form, page_name=page_name)
+    return render_template('login.html', STATE=state, form=form, page_name=page_name, login=True)
 
 
 @app.route('/signup/', methods={"GET", "POST"})
 def singup():
     form = RegisterForm(request.form)
+    page_name = 'Register'
     if request.method == "GET":
         state = ''.join(random.choice(string.uppercase + string.digits) for i in xrange(32))
-        return render_template('login.html', form=form)
+        login_session['state'] = state
+        return render_template('login.html', form=form, STATE=state, login=False, page_name=page_name)
     # check if the form is submitted and method is POST and check also if it validate or not
     elif form.validate_on_submit():
         # check if the post request has the file part
         if 'file' not in request.files:
             flash('No file part')
-            page_name = 'Register'
-            return render_template('login.html', form=form, page_name=page_name)
+            return render_template('login.html', form=form, login=False, page_name=page_name)
         image = request.files['file']
         # if user does not select file, browser also
         # submit a empty part without filename
@@ -249,13 +252,21 @@ def singup():
                 flash('cant save the Image')
                 return redirect(request.url)
     # some error in fields it will return it
-    return render_template('login.html', form=form)
+    return render_template('login.html', form=form, login=False, page_name=page_name)
 
 
 # logout
 @app.route('/logout')
 def logout():
-    logout_user()
+    if login_session['provider'] == 'google':
+        disconnect()
+    else:
+        logout_user()
+
+        del login_session['username']
+        del login_session['id']
+        del login_session['email']
+    flash("You have successfully been logged out.")
     return redirect(url_for('view_categories'))
 
 
@@ -307,20 +318,17 @@ def gconnect():
         print "Token's client ID does not match app's."
         response.headers['Content-Type'] = 'application/json'
         return response
-    credentials_json = login_session.get('credentials')
-    if credentials_json is not None:
-        stored_gplus_id = login_session.get('gplus_id')
-        if gplus_id == stored_gplus_id:
-            login_session['access_token'] = credentials.access_token
-            print login_session['access_token']
-            response = make_response(json.dumps('Current user is already connected.'),
-                                     200)
-            response.headers['Content-Type'] = 'application/json'
-            return response
+
+    stored_credentials = login_session.get('credentials')
+    stored_gplus_id = login_session.get('gplus_id')
+    if stored_credentials is not None and gplus_id == stored_gplus_id:
+        response = make_response(
+            json.dumps('Current user is already connected.'), 200)
+        response.headers['Content-Type'] = 'application/json'
+        return response
 
     # Store the access token in the session for later use.
-    login_session['credentials'] = credentials.to_json()
-    login_session['access_token'] = credentials.access_token
+    login_session['credentials'] = credentials.access_token
     login_session['gplus_id'] = gplus_id
 
     # Get user info
@@ -333,43 +341,31 @@ def gconnect():
     login_session['username'] = data['name']
     login_session['picture'] = data['picture']
     login_session['email'] = data['email']
-
     # ADD PROVIDER TO LOGIN SESSION
     login_session['provider'] = 'google'
     tempuser = session.query(User).filter_by(email=login_session['email']).one_or_none()
     # check if user already stored in Database
     if tempuser is None:
         newuser = create_user(login_session)
-        login_session['user_id'] = newuser.id
+        login_session['id'] = newuser.id
     else:
-        login_session['user_id'] = tempuser.id
-
-    output = ''
-    output += '<h1>Welcome, '
-    output += login_session['username']
-    output += '!</h1>'
-    output += '<img src="'
-    output += login_session['picture']
-    output += ' " style = "width: 300px; height: 300px;' \
-              'border-radius: 150px;-webkit-border-radius: 150px;-moz-border-radius: 150px;"> '
+        login_user(tempuser)
+        login_session['id'] = tempuser.id
     flash("you are now logged in as %s" % login_session['username'])
-    print "done!"
-    print login_session['username']
-    return output
+    return "Done"
 
 
 @app.route('/gdisconnect')
 def gdisconnect():
-    access_token = login_session['access_token']
+    access_token = login_session['credentials']
     if access_token is None:
         response = make_response(json.dumps('Current user not connected.'), 401)
         response.headers['Content-Type'] = 'application/json'
         return response
-    url = 'https://accounts.google.com/o/oauth2/revoke?token=%s' % login_session['access_token']
+    url = 'https://accounts.google.com/o/oauth2/revoke?token=%s' % login_session['credentials']
     h = httplib2.Http()
     result = h.request(url, 'GET')[0]
     if result['status'] == '200':
-        del login_session['access_token']
         del login_session['gplus_id']
         del login_session['credentials']
         response = make_response(json.dumps('Successfully disconnected.'), 200)
@@ -389,12 +385,12 @@ def disconnect():
         del login_session['username']
         del login_session['email']
         del login_session['picture']
-        del login_session['user_id']
+        del login_session['id']
         del login_session['provider']
-        flash("You have successfully been logged out.")
-        return redirect(url_for('showRestaurants'))
+        return redirect(url_for('view_categories'))
 
 
+# if user enter wrong url
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html', e=e), 404
@@ -416,4 +412,3 @@ if __name__ == "__main__":
     app.secret_key = "Bl7a & Not"
     app.debug = True
     app.run(host="0.0.0.0", port=5000)
-

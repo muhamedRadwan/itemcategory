@@ -19,13 +19,13 @@
           </div>
         </div>
         <div class="item active">
-          <img src="{{ url_for('static',filename='imgs/image1.jpg') }}" alt="...">
+          <img src="{{ url_for('static',filename='imgs/image2.jpg') }}" alt="...">
           <div class="carousel-caption">
             ...
           </div>
         </div>
         <div class="item">
-          <img src="{{ url_for('static',filename='imgs/image1.jpg') }}" alt="...">
+          <img src="{{ url_for('static',filename='imgs/image3.jpg') }}" alt="...">
           <div class="carousel-caption">
             ...
           </div>
@@ -62,7 +62,7 @@
                 <h2>Latest Items</h2>
                 {% if latest %}
                     {% for item in latest %}
-                        <a class="lead" href="">{{ item.name }}</a><span>({{ item.category.name }})</span>
+                        <a class="lead" href="{{ url_for('view_item',item_id=item.id, category_id=item.category.id) }}">{{ item.name }}</a><span>({{ item.category.name }})</span><br>
                     {% endfor %}
                 {% else %}
                     <h3 class="alert-warning">No Items!</h3>
