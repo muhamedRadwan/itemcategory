@@ -11,8 +11,8 @@ class User(Base, UserMixin):
     name = Column(String(100), nullable=False)
     id = Column(Integer, primary_key=True)
     picture = Column(String)
-    email = Column(String(100), nullable=False)
-    password_hash = Column(String, nullable=False)
+    email = Column(String(100), nullable=False,unique=True)
+    password_hash = Column(String, nullable=True)
 
     def hash_password(self, password):
         self.password_hash = generate_password_hash(password, method='sha256')

@@ -195,9 +195,7 @@ def login():
     if request.method == "POST":
         if form.validate_on_submit():
             user = session.query(User).filter_by(email=form.email.data).one_or_none()
-            if user:
-                print user.verify_pasword(form.password.data)
-            if not user or not user.verify_pasword(form.password.data):
+            if not user or user.password_hash is None or not user.verify_pasword(form.password.data):
                 flash('Error Unknown Username Or Password ')
                 return redirect(request.url)
             else:
