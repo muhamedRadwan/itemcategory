@@ -1,3 +1,9 @@
+/* Global */
+h2, .h2{
+  color: #e91e63;
+}
+
+/* Body */
 body{
   background-color:#1b6d85 ;
   font-weight: 300;
@@ -6,9 +12,7 @@ body{
   margin: 0;
 
 }
-h2, .h2{
-  color: #e91e63;
-}
+/* Header */
 .header {
     padding: 20px 0 30px;
 }
@@ -27,6 +31,7 @@ h2, .h2{
     margin-bottom: -19px;
   }
 }
+/* images */
 .img-inline, .img-responsive.img-inline {
     display: inline-block;
 }
@@ -47,12 +52,23 @@ h2, .h2{
 .carousel-inner{
   max-height:500px;
 }
+.profile-image{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+}
+/*main view */
 .background-white{
   background-color:white ;
   margin-top:90px;
   border-radius: 45px;
   padding: 25px 10px 25px 10px;
 }
+
+
+/* Forms */
 form {
   margin-top: 84px;
   margin-bottom: 50px;

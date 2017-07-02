@@ -1,7 +1,7 @@
 import os
 from flask import Flask
 from werkzeug.utils import secure_filename
-UPLOAD_FOLDER = './users'
+UPLOAD_FOLDER = './static/users'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
 app = Flask(__name__)

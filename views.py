@@ -204,6 +204,7 @@ def login():
                 login_session['id'] = user.id
                 login_session['username'] = user.name
                 login_session['email'] = user.email
+                login_session['picture'] = user.picture
                 login_session['provider'] = 'website'
                 login_user(user, remember=form.remember.data)
                 return redirect(url_for('view_categories'))
@@ -245,7 +246,7 @@ def singup():
             print 'this is user ID :' + str(user.id)
             filename = save_file(request.files['file'], str(user.id))
             if filename:  # Check if the photo is saved or not
-                user.picture = u'/users/'+filename
+                user.picture = u'users/'+filename
                 session.commit()
                 return redirect(url_for('login'))
             else:  # error in saving the photo
