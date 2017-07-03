@@ -30,8 +30,6 @@ DBSession = sessionmaker(bind=engine)
 session = DBSession()
 CLIENT_ID = json.loads(
     open('client_secret.json', 'r').read())['web']['client_id']
-APPLICATION_NAME = "Restaurant Menu App"
-
 login_Manager = LoginManager()
 login_Manager.init_app(app)
 login_Manager.login_view = 'login'
@@ -65,9 +63,12 @@ def create_category():
     elif request.method == "GET":
         return render_template("newCategory.html", button_value=button_value)
 
+#
 
 @app.route('/categories/<int:category_id>/')
 def view_category(category_id):
+    """ Here I will check if  category is None and if it None I will display 404 page All this Done on my template
+    Just Try it """
     category = session.query(Category).filter_by(id=category_id).one_or_none()
     items = session.query(ItemCategory).filter_by(category_id=category_id).all()
     return render_template('category.html', category=category, items=items)
@@ -105,8 +106,10 @@ def update_category(category_id):
 # Item CRUD
 @app.route('/categories/<int:category_id>/items/<int:item_id>')
 def view_item(category_id, item_id):
-        item = session.query(ItemCategory).filter_by(id=item_id, category_id=category_id).one_or_none()
-        return render_template('itemcatlog.html', item=item)
+    """ Also Here I will check  if  item is None and if it None I will display 404 page All this Done on my template
+    Just Try it and you will see it returned 404 page"""
+    item = session.query(ItemCategory).filter_by(id=item_id, category_id=category_id).one_or_none()
+    return render_template('itemcatlog.html', item=item)
 
 
 @app.route('/categories/<int:category_id>/items/new/', methods={"GET", "POST"})
@@ -124,7 +127,7 @@ def create_item(category_id):
             return render_template('newItem.html', category=category)
         # all things ok save item
         else:
-            item_category = ItemCategory(name=name, description=description, category_id=category_id, user_id=1)
+            item_category = ItemCategory(name=name, description=description, category_id=category_id, user_id=login_session['id'])
             session.add(item_category)
             session.commit()
             flash('%s item Added Successfully' % item_category.name)
@@ -135,6 +138,9 @@ def create_item(category_id):
 @login_required
 def update_item(category_id, item_id):
     item = session.query(ItemCategory).filter_by(id=item_id, category_id=category_id).one_or_none()
+    if item.user_id != login_session['id']:
+        flash("You Can't Update This Item")
+        return redirect(url_for('view_item', category_id=category_id, item_id=item_id))
     if request.method == "GET":
         return render_template('updateItem.html', category_id=category_id, item=item)
     elif request.method == "POST":
@@ -154,7 +160,10 @@ def update_item(category_id, item_id):
 @app.route('/categories/<int:category_id>/items/<int:item_id>/delete/', methods={"GET", "POST"})
 @login_required
 def delete_item(category_id, item_id):
-    item = session.query(ItemCategory).filter_by(category_id=category_id, id=item_id).one_or_none()
+    item = session.query(ItemCategory).filter_by(category_id=category_id, id=item_id, user_id=login_session['id']).one_or_none()
+    if item.user_id != login_session['id']:
+        flash("You Can't Delete This Item")
+        return redirect(url_for('view_item', category_id=category_id, item_id=item_id))
     if request.method == "GET":
         return render_template('deleteItem.html', item=item)
     elif request.method == "POST":
@@ -165,6 +174,7 @@ def delete_item(category_id, item_id):
 
 
 # JSON endpoint
+# ALl Categories
 @app.route('/categories.json')
 def get_categories():
     categories = session.query(Category).all()
@@ -182,6 +192,28 @@ def get_categories():
     return jsonify(js)
 
 
+# One Categories
+@app.route('/categories/<int:category_id>.json')
+def get_category(category_id):
+    category = session.query(Category).filter_by(id=category_id).one_or_none()
+    if category is None:
+        return jsonify({'Error': 'No Category with this ID'})
+    s = {
+            'name': category.name,
+            'id':  category.id
+    }
+    items_category = session.query(ItemCategory).filter_by(category_id=category.id).all()
+    s['Item'] = [i.sirlize for i in items_category]
+    return jsonify(s)
+
+
+# One Item
+@app.route('/categories/<int:category_id>/items/<int:item_id>.json')
+def get_item(category_id,item_id):
+    item_category = session.query(ItemCategory).filter_by(category_id=category_id, id=item_id).one_or_none()
+    if item_category is None:
+        return jsonify({'Error': 'No Item OR Category with this ID'})
+    return jsonify(item_category.sirlize)
 # login and authentication Function
 @login_Manager.user_loader
 def load_user(user_id):
