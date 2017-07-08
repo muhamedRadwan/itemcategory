@@ -13,7 +13,7 @@ Download the app and  run your vagrant machine then run the view file by write
 3. flask-bootstrap  you can install it by write  `pip install flask-bootstrap`
 4. flask-login  you can install it by write  `pip install flask-login`
 5. flask-wtf  you can install it by write  `pip install flask-wts`
-6. flask-wtf  you can install it by write  `pip install flask-wts`
+6. sqlalchemy  you can install it by write  `pip install sqlalchemy`
 7. wtforms  you can install it by write  `pip install wtforms`
 8. oauth2client  you can install it by write  `pip install oauth2client`
 
