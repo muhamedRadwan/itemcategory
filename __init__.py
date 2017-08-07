@@ -1,5 +1,6 @@
 import random
 import string
+import datetime
 from flask_bootstrap import Bootstrap
 from uploader import save_file
 from forms import LoginForm, RegisterForm
@@ -23,13 +24,13 @@ import httplib2
 import requests
 app = Flask(__name__)
 Bootstrap(app)
-
-engine = create_engine('sqlite:///ItemCatalog.db')
+app_secret_key="Bl7a & Not"
+engine = create_engine('postgresql://catalog:password@localhost/catalog')
 Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 CLIENT_ID = json.loads(
-    open('client_secret.json', 'r').read())['web']['client_id']
+    open('/var/www/catalog/catalog/client_secrets.json', 'r').read())['web']['client_id']
 login_Manager = LoginManager()
 login_Manager.init_app(app)
 login_Manager.login_view = 'login'
@@ -63,7 +64,7 @@ def create_category():
     elif request.method == "GET":
         return render_template("newCategory.html", button_value=button_value)
 
-#
+
 
 @app.route('/categories/<int:category_id>/')
 def view_category(category_id):
@@ -209,7 +210,7 @@ def get_category(category_id):
 
 # One Item
 @app.route('/categories/<int:category_id>/items/<int:item_id>.json')
-def get_item(category_id,item_id):
+def get_item(category_id, item_id):
     item_category = session.query(ItemCategory).filter_by(category_id=category_id, id=item_id).one_or_none()
     if item_category is None:
         return jsonify({'Error': 'No Item OR Category with this ID'})
@@ -225,6 +226,8 @@ def login():
     form = LoginForm(request.form)
     page_name = 'Login'
     if request.method == "POST":
+        if request.args.get('state') != login_session['state']:
+            return
         if form.validate_on_submit():
             user = session.query(User).filter_by(email=form.email.data).one_or_none()
             if not user or user.password_hash is None or not user.verify_pasword(form.password.data):
@@ -313,7 +316,7 @@ def gconnect():
 
     try:
         # Upgrade the authorization code into a credentials object
-        oauth_flow = flow_from_clientsecrets('client_secret.json', scope='')
+        oauth_flow = flow_from_clientsecrets('/var/www/catalog/catalog/client_secrets.json', scope='')
         oauth_flow.redirect_uri = 'postmessage'
         credentials = oauth_flow.step2_exchange(code)
     except FlowExchangeError:

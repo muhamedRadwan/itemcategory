@@ -2,13 +2,102 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74c1c03f-878a-4f7f-883a-9cff62da2bf1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../project/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Vagrantfile" afterPath="$PROJECT_DIR$/../Vagrantfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../project/.idea/modules.xml" afterPath="$PROJECT_DIR$/../project/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../project/.idea/project.iml" afterPath="$PROJECT_DIR$/../project/.idea/project.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../project/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../project/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../project/README.md" afterPath="$PROJECT_DIR$/../project/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../project/main.py" afterPath="$PROJECT_DIR$/../project/main.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/vagrant.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../.vimrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../CRUD/__MACOSX/._puppies.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../CRUD/__MACOSX/._puppypopulator.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../CRUD/popa.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../CRUD/puppyshelter.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../CRUD/puppyshelter.dp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../CRUD/query.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../CRUD/test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../OAuth2.0" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Vagrantfile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../bootstrap-3.3.7-dist.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../bootstrap.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../catalog/README.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/.idea/flaskWebserver.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/Zoom_launcher.exe" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/adder.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/bagel/bagelShop.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/bagel/bagel_tester.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/bagel/models.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/bagel/usersWithTokens.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/bagel/views.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/client_secret.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/data_setup.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/endpoints.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/findARestaurant.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/geocode.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/lotsofmenus.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/models.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/pale_Kale/templates/clientOAuth.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/project.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/puppies.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/querys.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/restaruants.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/restaurantmenu.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/restaurantmenuwithusers.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/static/blank_user.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/static/styles.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/static/top-banner.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/templates/deletemenuitem.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/templates/editmenuitem.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/templates/header.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/templates/login.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/templates/main.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/templates/menu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/templates/menuitems.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/templates/newRestaurant.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/templates/publicrestaurants.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/views.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../flaskWebserver/webserver.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../forum/.idea/forum.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../forum/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../forum/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../forum/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../forum/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../forum/forum.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../forum/forum.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../forum/forumdb.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../forum/newsdata.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../forum/solution/forum.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../forum/solution/forumdb_initial.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../forum/solution/forumdb_solved.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../forum/solution/forumdb_stepone.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../forum/solution/forumdb_steptwo.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../newsdata.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../newsdata.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../project/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../project/.idea/jsLibraryMappings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../project/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../project/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../project/.idea/project.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../project/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../project/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../project/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../project/main.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../project/templates/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../project/templates/static/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../project/templates/static/main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../testing/test1.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tournament/tournament.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tournament/tournament.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tournament/tournament_test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webserver/data_setup.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webserver/querys.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webserver/restaurantmenu.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../webserver/webserver.py" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,17 +106,18 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/itemCatalogApp$views.coverage" NAME="views Coverage Results" MODIFIED="1499956971147" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#130#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="2069">
+              <caret line="445" column="32" lean-forward="false" selection-start-line="445" selection-start-column="32" selection-end-line="445" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -35,9 +125,21 @@
       <file leaf-file-name="main.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+            <state relative-caret-position="115">
+              <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#89#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -51,6 +153,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/templates/main.html" />
+        <option value="$PROJECT_DIR$/views.py" />
       </list>
     </option>
   </component>
@@ -63,7 +166,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
+    <option name="width" value="1378" />
     <option name="height" value="754" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -104,28 +207,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="itemCatalogApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="itemCatalogApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -145,6 +234,177 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Python.views">
+    <configuration default="false" name="views" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="itemCatalogApp" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/views.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="itemCatalogApp" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="itemCatalogApp" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="itemCatalogApp" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="itemCatalogApp" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <module name="itemCatalogApp" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="itemCatalogApp" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="itemCatalogApp" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Python.views" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Python.views" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
@@ -159,27 +419,26 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1378" height="754" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25378788" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5030211" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905295" sideWeight="0.49697885" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32744783" sideWeight="0.5030303" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905295" sideWeight="0.49697885" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905295" sideWeight="0.4969697" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -198,16 +457,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#130#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/main.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#89#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2069">
+          <caret line="445" column="32" lean-forward="false" selection-start-line="445" selection-start-column="32" selection-end-line="445" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
           <folding />
         </state>
       </provider>

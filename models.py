@@ -7,6 +7,7 @@ Base = declarative_base()
 
 
 class User(Base, UserMixin):
+
     __tablename__ = "user"
     name = Column(String(100), nullable=False)
     id = Column(Integer, primary_key=True)
@@ -49,5 +50,5 @@ class ItemCategory(Base):
             'title': self.category.name
         }
 
-engine = create_engine('sqlite:///ItemCatalog.db')
+engine = create_engine('postgresql://catalog:password@localhost/catalog')
 Base.metadata.create_all(engine)

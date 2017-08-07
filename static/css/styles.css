@@ -70,8 +70,8 @@ body{
 
 /* Forms */
 form {
-  margin-top: 84px;
-  margin-bottom: 50px;
+  margin: auto;
+  text-align: center;
   width: 450px;
 }
 
